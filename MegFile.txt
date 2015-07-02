@@ -23,7 +23,7 @@ silbo gjevreci x3
 +50
 #1.7.2015
 
-#2.7.
+#2.7.2015
 hrana za kuche x5
 hartija za zavitkuvanje
 vloshki
@@ -32,4 +32,5 @@ domestos shamivchinja za chistenje
 +200
 +61
 #2.7.2015
+
 
