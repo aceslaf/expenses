@@ -40,4 +40,20 @@ sedmica
 +130
 #3.7.2015
 
+#4.7.2015
+veterinar
+silbo
+sedmica
++850
+kafe
+kupka
+toaletna
+mleko
+sladoled
+pivo
+kamen
++170
++340
+#4.7.2015
+
 
