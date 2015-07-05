@@ -1,0 +1,9 @@
+
+public class DailyExpenseDateComparator extends AbstractDailyExpenseComparator{
+
+	public DailyExpenseDateComparator(boolean isAscending) {
+		super(isAscending);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

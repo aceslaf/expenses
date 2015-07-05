@@ -1,0 +1,31 @@
+
+public class Palindrom {
+
+	public static boolean IsPalindrome(String str)
+	{
+		str=formatString(str);
+		if(str.length()==1)
+		{
+			return true;
+		}
+		
+		if(str.length()==2)
+		{
+			return str.charAt(0)==str.charAt(1);
+		}
+		
+		boolean hasOddNumberOfChars=(str.length()%2)!=0;
+		int half=str.length()/2;
+		int firstHalfEndIndex=hasOddNumberOfChars?;
+		int secondHalfBeginIndex=hasOddNumberOfChars?half+2:half+1;
+		String firstHalf,secondHalf;
+		
+		
+		return false;
+	}
+	public static String formatString(String str)
+	{
+		return str.trim();
+	}
+}
+

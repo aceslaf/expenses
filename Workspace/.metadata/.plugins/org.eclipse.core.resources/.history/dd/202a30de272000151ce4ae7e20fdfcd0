@@ -1,0 +1,15 @@
+
+public class Palindrom {
+
+	public static boolean IsPalindrome(String str)
+	{
+		str=
+		if()
+		return false;
+	}
+	public static String formatString(String str)
+	{
+		return str.trim();
+	}
+}
+

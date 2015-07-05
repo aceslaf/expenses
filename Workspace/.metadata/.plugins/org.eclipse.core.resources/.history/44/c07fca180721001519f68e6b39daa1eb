@@ -1,0 +1,11 @@
+import java.util.Comparator;
+
+
+public class DailyExpenseDateComparator extends AbstractDailyExpenseComparator implements Comparator<DailyExpense>{
+
+	public DailyExpenseDateComparator(boolean isAscending) {
+		super(isAscending);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

@@ -1,0 +1,166 @@
+import java.util.AbstractMap;
+import java.util.AbstractMap.SimpleEntry;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Queue;
+
+import javax.swing.text.MaskFormatter;
+
+
+
+
+
+public class ReadMe {
+	public static final int mazeSize=11;
+	public static void main(String[] args) {
+//		System.out.println("Praj sho kje praish, probaj da ne go ebesh pc-to, ne za drugo" + 
+//				"tuku mnogu vreme kje mi treba da instaliram se sho ima instalirano na nego" + 
+//				"i ima knigi, filmovi i sliki sho se priceless");
+//		
+//		System.out.println("Password-ot ti go kazav, ako go zaboravi, e " + "password");
+//		System.out.println("Imash java, eclipse i chrome, sorry, moite sys znaenja za setup tolku dozvoluvaa");
+//		System.out.println("Probaj da ne instalirash nisho, pso nemash admin privilegii");
+//		System.out.println("A toa neznaci da simnuvash .exe file-ovi, sho ne baraat instalacija, i da mi ebesh mater :)");
+//		
+//		System.out.println("Enjoyyyyyy!");
+//		
+//		System.out.println("Za se sho se mislish, prashaj! ;)");
+//		Maze maze = new Maze(10, 10, 0.5f);
+//		//maze.print();
+//		boolean[][] fields;
+//		fields=new boolean[mazeSize][mazeSize];
+//		boolean[][] visited=new boolean[mazeSize][mazeSize];
+//		for (int i = 0; i < mazeSize; i++) {
+//			for (int j = 0; j < mazeSize; j++) {
+//				fields[i][j]=Math.random()<0.5f;
+//				visited[i][j]=false;
+//			}
+//		}
+//		System.out.println();
+//		System.out.println();
+//		System.out.println();
+//		System.out.println();
+//		print(fields,  mazeSize, mazeSize);
+//		System.out.println();
+//		//print(visited,  mazeSize,  mazeSize);
+//		System.out.println();
+//		System.out.println();
+//		System.out.println();
+//		Queue<SimpleEntry<Integer, Integer>> q=new LinkedList<SimpleEntry<Integer,Integer>>();
+//		q.add(new SimpleEntry<Integer,Integer>(3, 3));
+//		while(!q.isEmpty())
+//		{
+//			SimpleEntry<Integer, Integer> currentNode=q.poll();
+//			Iterable<SimpleEntry<Integer, Integer>> neighbours = GetNeighbours(fields,  mazeSize,  mazeSize,currentNode);
+//			//System.out.println("("+currentNode.getKey()+","+currentNode.getValue()+")");
+//			for (Iterator iterator = neighbours.iterator(); iterator.hasNext();) {
+//				SimpleEntry<Integer, Integer> node = (SimpleEntry<Integer, Integer>) iterator
+//						.next();				
+//			
+//				if(!fields[node.getKey()][node.getValue()])
+//				{
+//					continue;
+//				}
+//				
+//				if(visited[node.getKey()][node.getValue()])
+//				{
+//					continue;
+//				}
+//				q.add(node);				
+//			}
+//			visited[currentNode.getKey()][currentNode.getValue()]=true;
+//			//System.out.println();System.out.println();System.out.println();
+//			//print(fields,  mazeSize, mazeSize);
+//			////System.out.println();
+//			//print(visited,  mazeSize,  mazeSize);
+//			
+//		}
+//		print(visited,  mazeSize,  mazeSize);
+//		boolean[][] result = new boolean [mazeSize][mazeSize];
+//		for (int i = 0; i < mazeSize; i++) {
+//			for (int j = 0; j < mazeSize; j++) {
+//				result[i][j]=fields[i][j] ^ visited[i][j];
+//			}
+//		}
+//		System.out.println();
+//		print(result,mazeSize,mazeSize);
+		
+		
+		
+//		PointsInSphere pointsINSphere=new PointsInSphere();
+//		System.out.println(pointsINSphere.howMany("-42,-90,70", "-65,-83,-95,54")+"="+0);
+//		System.out.println(pointsINSphere.howMany("-89,-100,46;68,-46,-25", "51,15,-5,92") +"="+1);
+//		System.out.println(pointsINSphere.howMany("-92,66,-39;-27,22,-13;-70,59,65;4,-53,18;-58,-65,-39;95,-86,-44;-94,-53,81;91,-21,-75;-68,-79,-58;8,-13,-65", "-1,18,11,98") +"="+4);
+		
+//		System.out.println(Anagram.isAnagram("  asdasdAsd", "dsadsadsas  "));
+		
+		
+		System.out.println(Palindrom.IsPalindrome("a"));
+		 
+	}
+	
+	public static Iterable<SimpleEntry<Integer, Integer>> GetNeighbours(boolean[][] fields,int rowCount,int columnCount, SimpleEntry<Integer,Integer> node)
+	{
+		ArrayList<SimpleEntry<Integer,Integer>> resList=new ArrayList<AbstractMap.SimpleEntry<Integer,Integer>>();
+		for (int i = -1; i <= 1; i++) {
+			for (int j = -1; j <= 1; j++) {
+				int neighbourRow=node.getKey()+i;
+				int neighbourColl=node.getValue()+j;
+				if(i==j)
+				{
+					continue;
+				}
+				if(neighbourColl<0||neighbourColl>=columnCount)
+				{
+					continue;
+				}
+				
+				if(neighbourRow<0||neighbourRow>=rowCount)
+				{
+					continue;
+				}
+				resList.add(new SimpleEntry<Integer, Integer>(node.getKey()+i,node.getValue()+j));
+			}
+		}
+		return resList;
+	}
+	
+	public static void print(boolean fields[][],int rowCOunt,int columnCount)
+	{
+		for (int i = 0; i < rowCOunt; i++) {
+			for (int j = 0; j < columnCount; j++) {
+				System.out.print(fields[i][j]?"1 ":"0 ");
+			}
+			System.out.println("");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+
+public class ExpensesCollection {
+
+	private Iterable<DailyExpense> allExpenses;
+	
+}

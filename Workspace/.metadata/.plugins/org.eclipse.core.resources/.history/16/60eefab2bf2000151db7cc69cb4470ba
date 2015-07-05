@@ -1,0 +1,14 @@
+
+public class ExpensesCollection {
+
+	private Iterable<DailyExpense> allExpenses;
+	public ExpensesCollection parse(String str)
+	{
+		return null;
+	}
+	
+	public ExpensesCollection parseFromFie(String str)
+	{
+		return null;
+	}
+}

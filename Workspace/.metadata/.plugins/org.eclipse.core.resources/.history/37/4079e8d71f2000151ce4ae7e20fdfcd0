@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+public class PointsInSphere {
+
+	public int howMany(String points, String sphere) {
+	    return 0;
+	  }
+	public Iterable<Vector3D> parsePoints(String str)
+	{
+		ArrayList<Vector3D> resList=new ArrayList<Vector3D>();
+		String[] vectors=str.split(";");
+		for ( String vectorStr: vectors) {
+			String[] coords=vectorStr.split(",");
+			float x = Integer.parseInt(coords[0]);
+			float y = Integer.parseInt(coords[1]);
+			float z = Integer.parseInt(coords[2]);
+			resList.add(new Vector3D(x, y, z));
+		}
+		return null;
+	}
+}

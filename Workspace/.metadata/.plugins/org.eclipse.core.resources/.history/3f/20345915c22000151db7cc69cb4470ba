@@ -1,0 +1,46 @@
+import java.util.Date;
+
+
+public class DailyExpense {
+	private Date date;
+	private String description;
+	private float cost;
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public float getCost() {
+		return cost;
+	}
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+	public static DailyExpense parse(String str,String dateFormat)
+	{
+		return null;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public DailyExpense combine(DailyExpense existing) {
+		// TODO Auto-generreturn null;
+		if(!existing.getDate().equals(this.getDate()))
+		{
+			throw new NullPointerException("Dates are not the same");
+		}
+		
+		DailyExpense result= new DailyExpense(this.description+existing.getDescription(), this.cost+existing.getCost());
+		return result;
+	}
+	public DailyExpense(Date date, String description, float cost) {
+		super();
+		this.date = date;
+		this.description = description;
+		this.cost = cost;
+	}
+}

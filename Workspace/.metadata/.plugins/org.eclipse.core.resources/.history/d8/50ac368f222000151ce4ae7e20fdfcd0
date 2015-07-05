@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+
+public class Anagram {
+
+	public static boolean isAnagram(String str1,String str2)
+	{
+		List<Character> lst1=new ArrayList<Character>();
+		List<Character> lst2=new ArrayList<Character>();
+		str1=str1.trim().toLowerCase();
+		str2=str2.trim().toLowerCase();
+		for (Character character : str1.toCharArray()) {
+			lst1.add(character);
+		}
+		for (Character character : str2.toCharArray()) {
+			lst2.add(character);
+		}
+		Collections.sort(list);
+		return false;
+	}
+}

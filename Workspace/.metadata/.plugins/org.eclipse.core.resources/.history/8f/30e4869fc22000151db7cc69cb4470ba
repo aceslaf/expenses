@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+
+public class ExpensesCollection {
+	
+	private Map<Date,DailyExpense> allExpenses;
+	
+	public ExpensesCollection() {
+		super();
+	}
+	
+	public ExpensesCollection parseFromFie(String str)
+	{
+		return null;
+	}
+
+	private void AddDailyExpense(DailyExpense newExpense)
+	{
+		DailyExpense existing =this.allExpenses.containsKey(newExpense.getDate())?this.allExpenses.get(newExpense.getDate()):null;
+		DailyExpense combinedExpense;
+		if(existing!=null)
+		{
+			if(!newExpense.getDate().equals(existing.getDate()))
+			{
+				throw new NullPointerException();
+			}
+			combinedExpense=newExpense.combine(existing);
+		}else
+		{
+			combinedExpense=newExpense;
+		}
+		this.allExpenses.put(combinedExpense.getDate(), combinedExpense)
+	}
+	
+	private DailyExpense getExpenseForDate(Date date)
+	{
+		return this.allExpenses.get(date);
+	}
+	
+}

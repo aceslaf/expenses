@@ -1,0 +1,13 @@
+
+public class DailyExpenseComparatorFactory {
+
+	public enum ComparatorType
+	{
+		DateAscending,
+		DateDescending,
+		CostAscending,
+		CostDescending,
+		ItemsCountAscendng,
+		ItemsCountDescending
+	}
+}

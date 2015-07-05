@@ -1,0 +1,11 @@
+
+public class ExpensesCollection {
+
+	private Iterable<DailyExpense> allExpenses;
+	
+	
+	public ExpensesCollection parseFromFie(String str)
+	{
+		return null;
+	}
+}

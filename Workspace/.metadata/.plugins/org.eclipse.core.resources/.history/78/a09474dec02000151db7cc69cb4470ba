@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Map;
+
+
+public class ExpensesCollection {
+	
+	private Map<Date,List<DailyExpense>> asd;
+	
+	public ExpensesCollection() {
+		super();
+	}
+	
+	public ExpensesCollection parseFromFie(String str)
+	{
+		return null;
+	}
+
+	private void AddDailyExpense(DailyExpense expense)
+	{
+		
+	}
+	
+	private Iterable<DailyExpense> Get
+	
+}

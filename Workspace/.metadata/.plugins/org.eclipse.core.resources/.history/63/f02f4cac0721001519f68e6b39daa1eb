@@ -1,0 +1,11 @@
+
+public abstract class AbstractDailyExpenseComparator {
+private boolean isAscending;
+protected AbstractDailyExpenseComparator(boolean isAscending)
+{
+	this.isAscending=isAscending;
+}
+public boolean isAscending() {
+	return isAscending;
+}
+}

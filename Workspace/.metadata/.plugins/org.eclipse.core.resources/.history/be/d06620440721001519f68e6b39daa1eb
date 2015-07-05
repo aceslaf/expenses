@@ -1,0 +1,28 @@
+import java.util.Comparator;
+
+
+public class DailyExpenseComparatorFactory {
+
+	public enum ComparatorType
+	{
+		DateAscending,
+		DateDescending,
+		CostAscending,
+		CostDescending,
+		ItemsCountAscendng,
+		ItemsCountDescending
+	}
+	private static DailyExpenseDateComparator dateAscendingComparator=new DailyExpenseDateComparator(true);
+	private static DailyExpenseDateComparator dateDescendingComparator=new DailyExpenseDateComparator(true);
+	public static Comparator<DailyExpense> CreateComparator(ComparatorType comparatorType)
+	{
+		switch (comparatorType) {
+		case DateAscending:
+			return 
+			break;
+
+		default:
+			break;
+		}
+	}
+}
