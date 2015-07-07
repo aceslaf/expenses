@@ -107,18 +107,12 @@ public class ReadMe {
 		
 	//	System.out.println(Palindrom.IsPalindrome(""));
 		
-		ExpensesCollection allExpensesCollection= ExpensesCollection.parseFromFie("C:\\Users\\Aleksandar\\Desktop\\EXPENSES\\expenses\\MegFile.txt");
+		ExpensesCollection allExpensesCollection= ExpensesCollection.parseFromFie("C:\\Users\\Ace\\Desktop\\EXPENSES\\expenses\\MegFile.txt");
 		SimpleDateFormat sdf= new SimpleDateFormat("d.M.yyyy");
 		List<DailyExpense> expensesList=allExpensesCollection.getAllExpenses();
-		for (DailyExpenseComparatorFactory.ComparatorType comparatorType : DailyExpenseComparatorFactory.ComparatorType.values()) {
-			Collections.sort(expensesList,DailyExpenseComparatorFactory.CreateComparator(comparatorType));
-			System.out.println("++++++++++++"+comparatorType.name());
-			for (DailyExpense dailyExpense : expensesList) {
-				System.out.println(dailyExpense);
-			}
-		}
 		
-		 
+		System.out.println(allExpensesCollection.getCost());
+		System.out.println(allExpensesCollection.getAvg());
 	}
 	
 	public static Iterable<SimpleEntry<Integer, Integer>> GetNeighbours(boolean[][] fields,int rowCount,int columnCount, SimpleEntry<Integer,Integer> node)

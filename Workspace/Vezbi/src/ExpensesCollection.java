@@ -8,9 +8,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import javax.imageio.metadata.IIOInvalidTreeException;
 import javax.swing.text.DateFormatter;
 
 
@@ -117,5 +119,22 @@ public class ExpensesCollection {
 	public List<DailyExpense> getAllExpenses()
 	{
 		return new ArrayList<DailyExpense>(this.allExpenses.values());
+	}
+	
+	public float getCost()
+	{
+		float sum=0;
+		Iterable<DailyExpense> expensesList=this.getAllExpenses();
+		for (Iterator iterator = expensesList.iterator(); iterator.hasNext();) {
+			DailyExpense dailyExpense = (DailyExpense) iterator.next();
+			sum+=dailyExpense.getCost();			
+		}
+		return sum;
+	}
+	public float getAvg()
+	{
+		float avg=0;
+		avg=this.getCost()/this.allExpenses.size();
+		return avg;
 	}
 }
