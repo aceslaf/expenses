@@ -111,8 +111,8 @@ public class ReadMe {
 		SimpleDateFormat sdf= new SimpleDateFormat("d.M.yyyy");
 		List<DailyExpense> expensesList=allExpensesCollection.getAllExpenses();
 		
-		System.out.println(allExpensesCollection.getCost());
-		System.out.println(allExpensesCollection.getAvg());
+		System.out.println("all: "+allExpensesCollection.getCost());
+		System.out.println("avg: "+allExpensesCollection.getAvg());
 	}
 	
 	public static Iterable<SimpleEntry<Integer, Integer>> GetNeighbours(boolean[][] fields,int rowCount,int columnCount, SimpleEntry<Integer,Integer> node)
